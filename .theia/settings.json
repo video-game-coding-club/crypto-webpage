@@ -11,5 +11,7 @@
     "editor.cursorSurroundingLines": 2,
     "files.eol": "\n",
     "git.alwaysSignOff": true,
-    "git.decorations.colors": true
+    "git.decorations.colors": true,
+    "editor.useTabStops": false,
+    "editor.tabCompletion": "on"
 }
