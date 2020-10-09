@@ -6,3 +6,9 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/video-game-coding-club/crypto-webpage)](https://github.com/video-game-coding-club/crypto-webpage/pulls)
 
 Check your [Hacktoberfest progress](https://hacktoberfest.digitalocean.com/profile)!
+
+## Introduction
+
+We are building a website to learn about building websites and encryption:
+
+<https://video-game-coding-club.github.io/crypto-webpage/>
