@@ -13,7 +13,6 @@
         "marginwidth",
         "marginheight",
         "scrolling",
-        "style",
         "width"
     ],
     "indent-delta": false,
@@ -23,7 +22,6 @@
     "spec-char-escape": true,
     "text-ignore-regex": false,
     "tag-bans": [
-        "style",
         "b",
         "i"
     ],
