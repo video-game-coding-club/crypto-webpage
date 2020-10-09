@@ -13,5 +13,6 @@
     "git.alwaysSignOff": true,
     "git.decorations.colors": true,
     "editor.useTabStops": false,
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "editor.autoSave": "on"
 }
