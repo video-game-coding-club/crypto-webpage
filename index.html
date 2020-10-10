@@ -3,24 +3,71 @@
 
   <head>
     <title>This is a title</title>
+
     <style>
       body {
           background-image: url('assets/5747307011a29592cb7dedcf279a6e81.jpg');
       }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+      function select_language(language) {
+        console.log("selecting language " + language);
+        $("[lang]").each(function () {
+          if ($(this).attr("lang") == language) {
+            console.log("Showing " + language);
+            $(this).show();
+          } else {
+            console.log("hiding " + $(this).attr("lang"));
+            $(this).hide();
+          }
+        });
+      }
+
+      $(select_language("en"));
+
+    </script>
   </head>
 
   <body>
-    <div style="background-image: url('assets/UwGR3qd_d.jpeg');">
+    <div>
       <p><strong>Cypher</strong>bot</p>
+      <p>
+        <select onchange="select_language(this.options[this.selectedIndex].value)">
+          <option value="en" selected>English</option>
+          <option value="de">Deutsch</option>
+          <option value="cn">中文</option>
+          <option value="es">Español</option>
+        </select>
+      </p>
       <form action="/action_page.php">
-        <label for="fname">Message:</label>
+        <label for="fname">
+          <span lang="en">Message:</span>
+          <span lang="de">Nachricht:</span>
+          <span lang="cn">讯息:</span>
+          <span lang="es">Mensaje:</span>
+        </label>
         <input type="text" id="fname" name="fname"><br><br>
-        <label for="sname">Secret:</label>
+        <label for="sname">
+          <span lang="en">Secret:</span>
+          <span lang="de">Geheimnis:</span>
+          <span lang="cn">秘密:</span>
+          <span lang="es">Secreto:</span>
+        </label>
         <input type="text" id="sname" name="sname"><br><br>
-        <label for="lname">Decoded Message:</label>
+        <label for="lname">
+          <span lang="en">Decoded Message:</span>
+          <span lang="de">Entschluesselte Nachricht:</span>
+          <span lang="cn">解码后的消息:</span>
+          <span lang="es">Mensaje Decodificado:</span>
+        </label>
         <input type="text" id="lname" name="lname"><br><br>
-        <input type="submit" value="Encrypt">
+        <span lang="en"><input type="submit" value="Encrypt"></span>
+        <span lang="de"><input type="submit" value="Verschluesseln"></span>
+        <span lang="cn"><input type="submit" value="加密"></span>
+        <span lang="es"><input type="submit" value="Cifrar"></span>
       </form>
     </div>
   </body>
