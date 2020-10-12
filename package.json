@@ -2,6 +2,13 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "browser-sync": "^2.26.12",
+    "eslint": "^7.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "htmllint": "^0.8.0",
     "htmllint-cli": "0.0.7",
     "http-server": "^0.12.3",
     "markdownlint-cli": "^0.24.0"
