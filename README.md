@@ -13,6 +13,12 @@ We are building a website to learn about building websites and encryption:
 
 <https://video-game-coding-club.github.io/crypto-webpage/>
 
+### GitPod Chrome Extension
+
+You might find the GitPod Chrome extension useful
+
+<https://chrome.google.com/webstore/detail/gitpod-dev-environments-i/dodmmooeoklaejobgleioelladacbeki>
+
 ## Encryption Methods
 
 ### Caesar Cipher
