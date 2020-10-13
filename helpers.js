@@ -1,16 +1,21 @@
+/* Show the currently selected language and hide all of the other
+ * languages.
+ */
 function selectLanguage (language) {
-  console.log('selecting language ' + language)
   $('[lang]').each(function () {
     if ($(this).attr('lang') === language) {
-      console.log('Showing ' + language)
       $(this).show()
     } else {
-      console.log('hiding ' + $(this).attr('lang'))
       $(this).hide()
     }
   })
 }
 
+/* Initialize language setting on page load
+ *
+ * The `$(...` is a jQuery shorthand to do something once the page is
+ * fully loaded and ready.
+ */
 $(function () {
   selectLanguage('en')
 })
