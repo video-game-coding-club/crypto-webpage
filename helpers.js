@@ -15,6 +15,8 @@ function selectLanguage (language) {
  *
  * The `$(...` is a jQuery shorthand to do something once the page is
  * fully loaded and ready.
+ *
+ * https://learn.jquery.com/using-jquery-core/document-ready/
  */
 $(function () {
   selectLanguage('en')
