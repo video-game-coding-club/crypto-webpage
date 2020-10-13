@@ -14,13 +14,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install linter
-        run: sudo npm install --global htmlhint htmllint-cli markdownlint-cli
+        run: npm install
 
       - name: Lint webpage
         run: |
-          htmlhint *.html
-          htmllint *.html
-          markdownlint *.md
+          npx htmlhint *.html
+          npx htmllint *.html
+          npx markdownlint *.md
+          npx eslint *.js
 
   build:
     runs-on: ubuntu-latest

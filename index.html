@@ -19,33 +19,14 @@
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-
-      function select_language(language) {
-        console.log("selecting language " + language);
-        $("[lang]").each(function () {
-          if ($(this).attr("lang") == language) {
-            console.log("Showing " + language);
-            $(this).show();
-          } else {
-            console.log("hiding " + $(this).attr("lang"));
-            $(this).hide();
-          }
-        });
-      }
-
-      $(function() {
-        select_language("en");
-      });
-
-    </script>
+    <script src="helpers.js"></script>
   </head>
 
   <body>
     <div>
       <p><strong>Cypher</strong>bot</p>
       <p>
-        <select onchange="select_language(this.options[this.selectedIndex].value)">
+        <select onchange="selectLanguage(this.options[this.selectedIndex].value)">
           <option value="en" selected>English</option>
           <option value="de">Deutsch</option>
           <option value="cn">中文</option>
