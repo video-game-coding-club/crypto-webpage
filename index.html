@@ -21,43 +21,44 @@
           <option value="LU">language of random</option>
         </select>
       </p>
-      <!-- This is pretty unclear for a newbie (like me) .. should
-      break it up and provide more detail (with comments)? -->
-      <form action="/action_page.php">
-        <label for="inputtext">
-          <span lang="en">Message:</span>
-          <span lang="de">Nachricht:</span>
-          <span lang="cn">讯息:</span>
-          <span lang="es">Mensaje:</span>
-          <span lang="LU">QWERTYUIOP:</span>
-        </label>
-        <textarea id="inputtext" name="inputtext" rows="4" cols="50">Enter message to be de/encrypted.</textarea><br><br>
 
-        <label for="key">
-          <span lang="en">Secret Key:</span>
-          <span lang="de">Schlüssel:</span>
-          <span lang="cn">秘密:</span>
-          <span lang="es">Secreto:</span>
-          <span lang="LU">TyPe LeTtErS:</span>
-        </label>
-        <input type="key" id="key" name="key"><br><br>
+      <!--
+          This is pretty unclear for a newbie (like me) .. should
+          break it up and provide more detail (with comments)?
+        -->
+      <label for="inputtext">
+        <span lang="en">Message:</span>
+        <span lang="de">Nachricht:</span>
+        <span lang="cn">讯息:</span>
+        <span lang="es">Mensaje:</span>
+        <span lang="LU">QWERTYUIOP:</span>
+      </label>
+      <textarea id="inputtext" name="inputtext" rows="4" cols="50">Enter message to be de/encrypted.</textarea><br><br>
 
-        <label for="outputtext">
-          <span lang="en">Decoded Message:</span>
-          <span lang="de">Entschlüsselte Nachricht:</span>
-          <span lang="cn">解码后的消息:</span>
-          <span lang="es">Mensaje Decodificado:</span>
-          <span lang="LU">SUPPOSED MESSAGE:</span>
-        </label>
-        <textarea id="outputtext" name="outputtext" rows="4" cols="50">Output de/encrypted message</textarea><br><br>
+      <label for="key">
+        <span lang="en">Secret Key:</span>
+        <span lang="de">Schlüssel:</span>
+        <span lang="cn">秘密:</span>
+        <span lang="es">Secreto:</span>
+        <span lang="LU">TyPe LeTtErS:</span>
+      </label>
+      <input type="key" id="key" name="key"><br><br>
 
-        <!--  button -->
-        <span lang="en"><input type="submit" value="Encrypt"></span>
-        <span lang="de"><input type="submit" value="Verschlüsseln"></span>
-        <span lang="cn"><input type="submit" value="加密"></span>
-        <span lang="es"><input type="submit" value="Cifrar"></span>
-        <span lang="LU"><input type="submit" value="CLIKE HERE FOR CANDY "></span>
-      </form>
+      <label for="outputtext">
+        <span lang="en">Decoded Message:</span>
+        <span lang="de">Entschlüsselte Nachricht:</span>
+        <span lang="cn">解码后的消息:</span>
+        <span lang="es">Mensaje Decodificado:</span>
+        <span lang="LU">SUPPOSED MESSAGE:</span>
+      </label>
+      <textarea id="outputtext" name="outputtext" rows="4" cols="50">Output de/encrypted message</textarea><br><br>
+
+      <!--  button -->
+      <span lang="en"><input type="submit" onclick="processForm()" value="Encrypt"></span>
+      <span lang="de"><input type="submit" onclick="processForm()" value="Verschlüsseln"></span>
+      <span lang="cn"><input type="submit" onclick="processForm()" value="加密"></span>
+      <span lang="es"><input type="submit" onclick="processForm()" value="Cifrar"></span>
+      <span lang="LU"><input type="submit" onclick="processForm()" value="CLIKE HERE FOR CANDY"></span>
     </div>
 
   </body>
