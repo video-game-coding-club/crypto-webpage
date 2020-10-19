@@ -11,6 +11,10 @@ function selectLanguage (language) {
   })
 }
 
+function processForm () { // eslint-disable-line no-unused-vars
+  alert('processing form (' + $('#inputtext')[0].value + ')')
+}
+
 /* Initialize language setting on page load
  *
  * The `$(...` is a jQuery shorthand to do something once the page is
