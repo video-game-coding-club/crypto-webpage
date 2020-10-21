@@ -16,6 +16,9 @@ jobs:
       - name: Install linter
         run: npm install
 
+      - name: Check for updates
+        run: npx ncu
+
       - name: Lint webpage
         run: |
           npx htmlhint *.html
