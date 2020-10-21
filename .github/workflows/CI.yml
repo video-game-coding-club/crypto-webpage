@@ -21,8 +21,11 @@ jobs:
           npx htmlhint *.html
           npx htmllint *.html
           npx markdownlint *.md
-          npx eslint *.js
           npx stylelint *.css
+
+      - name: Lint JavaScript
+        run: |
+          npx eslint *.js
 
   build:
     runs-on: ubuntu-latest
@@ -30,10 +33,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Npm install and build webpage
+      - name: Npm install
         run: |
           npm install
+
+      - name: Build webpage
+        run: |
           npm run build --if-present
+
+      - name: Test JavaScript
+        run: |
           npm test
 
       - name: Archive production artifacts
