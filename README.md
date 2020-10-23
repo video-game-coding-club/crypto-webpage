@@ -13,6 +13,18 @@ We are building a website to learn about building websites and encryption:
 
 <https://video-game-coding-club.github.io/crypto-webpage/>
 
+Once the website is complete, it will encrypt messages that you give it using the secret key that you provide. It will also decrypt messages if you know the secret key for decryption.
+
+Steps:
+
+1) When you first arrive at the website's homepage, choose the language for the homepage prompts.
+
+2) Next enter the message that you would like to encrypt or decrypt, in the first box provided.
+
+3) Enter the secret key to encode or decode the message.
+
+4) Finally, click on the "Encrypt" button and the decoded (or encoded) message will appear in the last box! 10/23/20: Note that this step doesn't work yet.
+
 ### GitPod Chrome Extension
 
 You might find the GitPod Chrome extension useful
