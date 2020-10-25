@@ -13,7 +13,7 @@ function selectLanguage (language) {
 
 function processForm () { // eslint-disable-line no-unused-vars
   alert('processing form (' + $('#inputtext')[0].value + ')')
-  alert('shiftLetter("a", 1) function result: ' + shiftLetter("a", 1))
+  alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1))
 }
 
 /* Initialize language setting on page load
@@ -31,6 +31,6 @@ $(function () {
  * letter.
  */
 function shiftLetter (letter, shift) {
-  code = letter.charCodeAt(0)+shift;
-  return String.fromCharCode(code);
+  var code = letter.charCodeAt(0) + shift
+  return String.fromCharCode(code)
 }
