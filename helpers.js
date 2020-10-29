@@ -4,16 +4,16 @@
 function selectLanguage (language) {
   $('[lang]').each(function () {
     if ($(this).attr('lang') === language) {
-      $(this).show()
+      $(this).show();
     } else {
-      $(this).hide()
+      $(this).hide();
     }
-  })
+  });
 }
 
 function processForm () { // eslint-disable-line no-unused-vars
-  alert('processing form (' + $('#inputtext')[0].value + ')')
-  alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1))
+  alert('processing form (' + $('#inputtext')[0].value + ')');
+  alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1));
 }
 
 /* Initialize language setting on page load
@@ -24,13 +24,13 @@ function processForm () { // eslint-disable-line no-unused-vars
  * https://learn.jquery.com/using-jquery-core/document-ready/
  */
 $(function () {
-  selectLanguage('en')
-})
+  selectLanguage('en');
+});
 
 /* Takes a letter and a shift as arguments and returns the shifted
  * letter.
  */
 function shiftLetter (letter, shift) {
-  var code = letter.charCodeAt(0) + shift
-  return String.fromCharCode(code)
+  var code = letter.charCodeAt(0) + shift;
+  return String.fromCharCode(code);
 }
