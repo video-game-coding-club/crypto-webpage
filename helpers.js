@@ -36,7 +36,7 @@ export function shiftLetter (letter, shift) {
   var zcode = 'z'.charCodeAt(0);
 
   // Change the shift into a positive number between 0 and 25.
-  shift = shift % 26
+  shift = shift % 26;
   if (shift < 0) {
     shift += 26;
   }
