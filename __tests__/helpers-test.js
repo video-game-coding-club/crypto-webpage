@@ -12,4 +12,8 @@ describe('Shift letters', () => {
     expect(shiftLetter('a', 3)).toEqual('d');
     expect(shiftLetter('B', 1)).toEqual('C');
   });
+  test('bigger shifts', () => {
+    expect(shiftLetter('a', 26)).toEqual('a');
+    expect(shiftLetter('a', 77)).toEqual('z');
+  });
 });
