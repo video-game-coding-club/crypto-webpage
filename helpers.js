@@ -35,33 +35,25 @@ export function shiftLetter (letter, shift) {
   var acode = 'a'.charCodeAt(0);
   var zcode = 'z'.charCodeAt(0);
 
+  // Change the shift into a positive number between 0 and 25.
+  shift = shift % 26
+  if (shift < 0) {
+    shift += 26;
+  }
+
   // Only shift if the letter really is a letter.
   if (code >= Acode && code <= Zcode) {
     // The letter is a capital letter. Shift it.
     code += shift;
-    // If code is too big or too small, wrap it so it isn't.
-    code = wrapNumber(code, Acode, Zcode);
+    // If code is too big, wrap it so it isn't.
+    code = Acode + (code - Acode) % 26;
   } else if (code >= acode && code <= zcode) {
     // The letter is a lowercase letter. Shift it and wrap it.
     code += shift;
-    code = wrapNumber(code, acode, zcode);
+    code = acode + (code - acode) % 26;
   }
 
   return String.fromCharCode(code);
-}
-
-/* Takes a number and wraps it around so it fits inside the interval.
- */
-function wrapNumber (code, low, high) {
-  var wrap = high - low + 1;
-
-  if (code > high) {
-    code -= wrap;
-  } else if (code < low) {
-    code += wrap;
-  }
-
-  return code;
 }
 
 /* Initialize language setting on page load
