@@ -37,14 +37,14 @@ export function shiftLetter (letter, shift) {
 
   // Only shift if the letter really is a letter.
   if (code >= Acode && code <= Zcode) {
-    // The letter is a capital letter. Shift it.  
+    // The letter is a capital letter. Shift it.
     code += shift;
     // If code is too big or too small, wrap it so it isn't.
-    code = wrapNumber(code,Acode,Zcode);
+    code = wrapNumber(code, Acode, Zcode);
   } else if (code >= acode && code <= zcode) {
     // The letter is a lowercase letter. Shift it and wrap it.
     code += shift;
-    code = wrapNumber(code,acode,zcode);
+    code = wrapNumber(code, acode, zcode);
   }
 
   return String.fromCharCode(code);
