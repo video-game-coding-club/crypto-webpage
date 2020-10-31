@@ -19,8 +19,19 @@ export function selectLanguage (language) {
 window.selectLanguage = selectLanguage;
 
 function processForm () { // eslint-disable-line no-unused-vars
-  alert('processing form (' + $('#inputtext')[0].value + ')');
-  alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1));
+  // Get the secret key from the form.
+  var formKey = $('#key')[0].value;
+
+  // Check if formKey is a number. isNan is false if the key is
+  // empty, so let's check that too.
+  if (isNaN(formKey) || formKey == "") {
+    alert('The secret key must be an integer. You entered "'
+      + formKey + '".');
+  } else {
+    alert('processing form (' + $('#inputtext')[0].value + ')');
+
+    alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1));
+  }
 }
 window.processForm = processForm;
 
