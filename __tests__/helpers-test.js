@@ -9,11 +9,26 @@ describe('Fake test', () => {
 describe('Shift letters', () => {
   test('simple shifts', () => {
     expect(shiftLetter('a', 1)).toEqual('b');
+    expect(shiftLetter('A', 1)).toEqual('B');
     expect(shiftLetter('a', 3)).toEqual('d');
-    expect(shiftLetter('B', 1)).toEqual('C');
+    expect(shiftLetter('A', 3)).toEqual('D');
   });
-  test('bigger shifts', () => {
+  test('wrapping shifts', () => {
     expect(shiftLetter('a', 26)).toEqual('a');
+    expect(shiftLetter('A', 26)).toEqual('A');
     expect(shiftLetter('a', 77)).toEqual('z');
+    expect(shiftLetter('A', 77)).toEqual('Z');
+  });
+  test('simple negative shifts', () => {
+    expect(shiftLetter('a', -1)).toEqual('z');
+    expect(shiftLetter('A', -1)).toEqual('Z');
+    expect(shiftLetter('a', -3)).toEqual('x');
+    expect(shiftLetter('A', -3)).toEqual('X');
+  });
+  test('wrapping negative shifts', () => {
+    expect(shiftLetter('a', -26)).toEqual('a');
+    expect(shiftLetter('A', -26)).toEqual('A');
+    expect(shiftLetter('a', -77)).toEqual('b');
+    expect(shiftLetter('A', -77)).toEqual('B');
   });
 });
