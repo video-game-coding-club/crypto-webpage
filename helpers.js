@@ -19,8 +19,13 @@ export function selectLanguage (language) {
 window.selectLanguage = selectLanguage;
 
 function processForm () { // eslint-disable-line no-unused-vars
-  alert('processing form (' + $('#inputtext')[0].value + ')');
-  alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1));
+  // Save some values from the form.
+  var formMessage = $('#inputtext')[0].value;
+  var formKey = $('#key')[0].value;
+
+  // Process the form.
+  alert('processing form (' + formMessage + ')');
+  alert('result: ' + shiftText(formMessage, formKey));
 }
 window.processForm = processForm;
 
