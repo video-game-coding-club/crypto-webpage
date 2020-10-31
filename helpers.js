@@ -28,7 +28,7 @@ window.processForm = processForm;
  * text.
  */
 export function shiftText (text, shift) {
-  var code = "";
+  var code = '';
 
   for (var i in text) {
     code += shiftLetter(text[i], shift);
