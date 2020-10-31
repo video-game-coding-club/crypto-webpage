@@ -1,4 +1,4 @@
-import { shiftLetter } from '../helpers';
+import { shiftLetter, shiftText } from '../helpers';
 
 describe('Fake test', () => {
   test('it should pass', () => {
@@ -37,5 +37,11 @@ describe('Shift letters', () => {
     expect(shiftLetter('.', 2)).toEqual('.');
     expect(shiftLetter(' ', 4)).toEqual(' ');
     expect(shiftLetter('ä', 4)).toEqual('ä');
+  });
+});
+
+describe('Shift text', () => {
+  test('simple shifts', () => {
+    expect(shiftText('Apple', 1)).toEqual('Bqqmf');
   });
 });

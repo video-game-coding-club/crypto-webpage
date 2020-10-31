@@ -24,6 +24,19 @@ function processForm () { // eslint-disable-line no-unused-vars
 }
 window.processForm = processForm;
 
+/* Takes a text and a shift as arguments and returns the shifted
+ * text.
+ */
+export function shiftText (text, shift) {
+  var code = "";
+
+  for (var i in text) {
+    code += shiftLetter(text[i], shift);
+  }
+
+  return code;
+}
+
 /* Takes a letter and a shift as arguments and returns the shifted
  * letter.
  */
