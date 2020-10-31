@@ -19,17 +19,24 @@ you know the secret key for decryption.
 
 Steps:
 
-1) When you first arrive at the website's homepage, choose the language
-for the homepage prompts.
+1. When you first arrive at the website's homepage, choose the
+   language for the homepage prompts.
 
-2) Next enter the message that you would like to encrypt or decrypt, in
-the first box provided.
+2. Next enter the message that you would like to encrypt or decrypt,
+   in the first box provided.
 
-3) Enter the secret key to encode or decode the message.
+3. Enter the secret key to encode or decode the message.
 
-4) Finally, click on the "Encrypt" button and the decoded (or encoded)
-message will appear in the last box! 10/23/20: Note that this step
-doesn't work yet.
+4. Finally, click on the "Encrypt" button and the decoded (or encoded)
+   message will appear in the last box!
+
+   **10/23/20**: Note that this step doesn't work yet.
+
+### Development Status
+
+- [ ] Field to enter cleartext
+- [ ] Field to enter ciphertext
+- [ ] Field to enter secret (the shift)
 
 ### GitPod Chrome Extension
 
