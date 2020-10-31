@@ -34,9 +34,12 @@ Steps:
 
 ### Development Status
 
-- [ ] Field to enter cleartext
-- [ ] Field to enter ciphertext
-- [ ] Field to enter secret (the shift)
+- [x] Field to enter cleartext
+- [x] Field to enter ciphertext
+- [x] Field to enter secret (the shift)
+- [x] Function to shift a letter
+- [ ] Function to check that the secret is a number
+- [ ] Function to shift a text
 
 ### GitPod Chrome Extension
 
