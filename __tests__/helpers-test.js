@@ -31,4 +31,11 @@ describe('Shift letters', () => {
     expect(shiftLetter('a', -77)).toEqual('b');
     expect(shiftLetter('A', -77)).toEqual('B');
   });
+  test('shifting special characters', () => {
+    expect(shiftLetter('!', 2)).toEqual('!');
+    expect(shiftLetter('#', 2)).toEqual('#');
+    expect(shiftLetter('.', 2)).toEqual('.');
+    expect(shiftLetter(' ', 4)).toEqual(' ');
+    expect(shiftLetter('ä', 4)).toEqual('ä');
+  });
 });
