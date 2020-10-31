@@ -24,9 +24,9 @@ function processForm () { // eslint-disable-line no-unused-vars
 
   // Check if formKey is a number. isNan is false if the key is
   // empty, so let's check that too.
-  if (isNaN(formKey) || formKey == "") {
-    alert('The secret key must be an integer. You entered "'
-      + formKey + '".');
+  if (isNaN(formKey) || formKey === '') {
+    alert('The secret key must be an integer. You entered "' +
+      formKey + '".');
   } else {
     alert('processing form (' + $('#inputtext')[0].value + ')');
 
