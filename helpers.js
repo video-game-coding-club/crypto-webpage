@@ -41,7 +41,7 @@ window.processForm = processForm;
  */
 export function isInteger (test) {
   if (!(isNaN(test) || test === '')) {
-    if (Math.round(test) == test) {
+    if (Math.round(test) === test) {
       return true;
     } else {
       return false;
