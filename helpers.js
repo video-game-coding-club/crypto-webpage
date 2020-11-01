@@ -24,7 +24,7 @@ function processForm () { // eslint-disable-line no-unused-vars
 
   // Check if formKey is a number. isNan is false if the key is
   // empty, so let's check that too.
-  if (isNaN(formKey) || formKey === '') {
+  if (!isNumber(formKey)) {
     alert('The secret key must be an integer. You entered "' +
       formKey + '".');
   } else {
@@ -34,6 +34,13 @@ function processForm () { // eslint-disable-line no-unused-vars
   }
 }
 window.processForm = processForm;
+
+/* Check if test is a number. isNan is false if test is empty, so
+ * check if test is empty too.
+ */
+export function isNumber (test) {
+  return !(isNaN(test) || test === '');
+}
 
 /* Takes a letter and a shift as arguments and returns the shifted
  * letter.
