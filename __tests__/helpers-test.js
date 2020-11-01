@@ -1,4 +1,4 @@
-import { shiftLetter } from '../helpers';
+import { shiftLetter, isInteger } from '../helpers';
 
 describe('Fake test', () => {
   test('it should pass', () => {
@@ -37,5 +37,13 @@ describe('Shift letters', () => {
     expect(shiftLetter('.', 2)).toEqual('.');
     expect(shiftLetter(' ', 4)).toEqual(' ');
     expect(shiftLetter('ä', 4)).toEqual('ä');
+  });
+});
+
+describe('Check integer', () => {
+  test('integer tests', () => {
+    expect(isInteger(1)).toEqual(true);
+    expect(isInteger('a')).toEqual(false);
+    expect(isInteger(1.2)).toEqual(false);
   });
 });
