@@ -19,7 +19,8 @@ export function selectLanguage (language) {
 window.selectLanguage = selectLanguage;
 
 function processForm () { // eslint-disable-line no-unused-vars
-  // Get the secret key from the form.
+  // Save some values from the form.
+  var formMessage = $('#inputtext')[0].value;
   var formKey = $('#key')[0].value;
 
   // Check if formKey is an integer. isNan is false if the key is
@@ -28,9 +29,9 @@ function processForm () { // eslint-disable-line no-unused-vars
     alert('The secret key must be an integer. You entered "' +
       formKey + '".');
   } else {
-    alert('processing form (' + $('#inputtext')[0].value + ')');
-
-    alert('shiftLetter("a", 1) function result: ' + shiftLetter('a', 1));
+    // Process the form.
+    alert('processing form (' + formMessage + ')');
+    alert('result: ' + shiftText(formMessage, formKey));
   }
 }
 window.processForm = processForm;
@@ -48,6 +49,19 @@ export function isInteger (test) {
   } else {
     return false;
   }
+}
+
+/* Takes a text and a shift as arguments and returns the shifted
+ * text.
+ */
+export function shiftText (text, shift) {
+  var code = '';
+
+  for (var i in text) {
+    code += shiftLetter(text[i], shift);
+  }
+
+  return code;
 }
 
 /* Takes a letter and a shift as arguments and returns the shifted
