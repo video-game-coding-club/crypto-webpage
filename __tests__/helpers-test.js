@@ -1,4 +1,4 @@
-import { shiftLetter, shiftText, isInteger } from '../helpers';
+import { shiftLetter, shiftText, isStringInteger } from '../helpers';
 
 describe('Fake test', () => {
   test('it should pass', () => {
@@ -48,8 +48,8 @@ describe('Shift text', () => {
 
 describe('Check integer', () => {
   test('integer tests', () => {
-    expect(isInteger(1)).toEqual(true);
-    expect(isInteger('a')).toEqual(false);
-    expect(isInteger(1.2)).toEqual(false);
+    expect(isStringInteger('1')).toEqual(true);
+    expect(isStringInteger('a')).toEqual(false);
+    expect(isStringInteger('1.2')).toEqual(false);
   });
 });
