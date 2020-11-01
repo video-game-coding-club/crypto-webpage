@@ -23,11 +23,32 @@ function processForm () { // eslint-disable-line no-unused-vars
   var formMessage = $('#inputtext')[0].value;
   var formKey = $('#key')[0].value;
 
-  // Process the form.
-  alert('processing form (' + formMessage + ')');
-  alert('result: ' + shiftText(formMessage, formKey));
+  // Check if formKey is actually an integer.
+  if (!isStringInteger(formKey)) {
+    alert('The secret key must be an integer. You entered "' +
+      formKey + '".');
+  } else {
+    // Process the form.
+    alert('processing form (' + formMessage + ')');
+    alert('result: ' + shiftText(formMessage, Number(formKey)));
+  }
 }
 window.processForm = processForm;
+
+/* Check if the string "test" is actually an integer. isNan is false
+ * if "test" is empty, so check if "test" is empty too.
+ */
+export function isStringInteger (test) {
+  if (!(isNaN(test) || test === '')) {
+    if (Math.round(Number(test)) === Number(test)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
 
 /* Takes a text and a shift as arguments and returns the shifted
  * text.
