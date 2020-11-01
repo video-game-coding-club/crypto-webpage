@@ -13,9 +13,13 @@ We are building a website to learn about building websites and encryption:
 
 <https://video-game-coding-club.github.io/crypto-webpage/>
 
-Once the website is complete, it will encrypt messages that you give it
-using the secret key that you provide. It will also decrypt messages if
-you know the secret key for decryption.
+This website encrypts messages that you give it using the secret key
+that you provide and a Caesar cipher. It will also decrypt messages if
+you know the secret key for decryption. For a Caesar cipher, the
+secret key to decrypt a message is the opposite of the secret key used
+to encrypt the message. For example, if the secret key to encrypt the
+message was 4, then the secret key to decrypt the message is -4, or
+you can use 26 - 4 = 22.
 
 Steps:
 
@@ -25,12 +29,14 @@ Steps:
 2. Next enter the message that you would like to encrypt or decrypt,
    in the first box provided.
 
-3. Enter the secret key to encode or decode the message.
+3. Enter the secret key to encode or decode the message. This must be
+   an integer.
 
 4. Finally, click on the "Encrypt" button and the decoded (or encoded)
    message will appear in the last box!
 
-   **10/23/20**: Note that this step doesn't work yet.
+   **10/31/20**: Note that right now the message appears in the result
+   alert box.
 
 ### Development Status
 
@@ -49,9 +55,9 @@ Steps:
       [#55](https://github.com/video-game-coding-club/crypto-webpage/issues/55),
       [#76](https://github.com/video-game-coding-club/crypto-webpage/issues/76),
       [#79](https://github.com/video-game-coding-club/crypto-webpage/issues/79)
-- [ ] Function to check that the secret is a number:
+- [ ] Function to check that the secret is an integer:
       [#54](https://github.com/video-game-coding-club/crypto-webpage/issues/54)
-- [ ] Function to shift a text:
+- [x] Function to shift a text:
       [#70](https://github.com/video-game-coding-club/crypto-webpage/issues/70)
 
 ### GitPod Chrome Extension
